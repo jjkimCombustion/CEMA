@@ -1,0 +1,1 @@
+../eigen/doc/snippets/FullPivHouseholderQR_solve.cpp

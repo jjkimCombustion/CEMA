@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Array_initializer_list_vector_cxx11.cpp

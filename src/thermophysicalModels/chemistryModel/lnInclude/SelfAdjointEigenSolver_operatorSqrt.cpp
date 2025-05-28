@@ -1,0 +1,1 @@
+../eigen/doc/snippets/SelfAdjointEigenSolver_operatorSqrt.cpp

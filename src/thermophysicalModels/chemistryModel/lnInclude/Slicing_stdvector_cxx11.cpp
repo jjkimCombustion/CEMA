@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Slicing_stdvector_cxx11.cpp

@@ -1,0 +1,1 @@
+../eigen/doc/snippets/DirectionWise_hnormalized.cpp

@@ -1,0 +1,1 @@
+../eigen/doc/snippets/MatrixBase_diagonal_template_int.cpp

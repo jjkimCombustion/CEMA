@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Array_variadic_ctor_cxx11.cpp

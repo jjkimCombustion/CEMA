@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Matrix_Map_stride.cpp

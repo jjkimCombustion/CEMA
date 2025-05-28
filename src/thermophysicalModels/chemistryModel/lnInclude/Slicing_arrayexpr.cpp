@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Slicing_arrayexpr.cpp

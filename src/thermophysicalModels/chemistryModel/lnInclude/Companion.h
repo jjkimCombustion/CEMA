@@ -1,0 +1,1 @@
+../eigen/unsupported/Eigen/src/Polynomials/Companion.h

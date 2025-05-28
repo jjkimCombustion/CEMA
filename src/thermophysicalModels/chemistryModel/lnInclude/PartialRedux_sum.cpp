@@ -1,0 +1,1 @@
+../eigen/doc/snippets/PartialRedux_sum.cpp

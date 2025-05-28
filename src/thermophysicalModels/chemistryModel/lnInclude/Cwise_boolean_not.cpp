@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Cwise_boolean_not.cpp

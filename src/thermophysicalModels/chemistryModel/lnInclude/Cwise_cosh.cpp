@@ -1,0 +1,1 @@
+../eigen/doc/snippets/Cwise_cosh.cpp

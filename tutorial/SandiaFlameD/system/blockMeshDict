@@ -1,0 +1,245 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 0.001;  //mm
+
+// Height
+x1 -72;
+x2  0;
+x3  720;
+
+halfAngle 1.0; 
+
+// Radius 
+r1 3.6;  //radius of fuel nozzle
+r2 3.85;  //inner radius of annulus
+r3 9.1;  //outer radius of annulus
+r4 9.45; 
+r5 180; //radius of chamber
+
+radHalfAngle    #calc "degToRad($halfAngle)";   //change degree to radian
+
+y1      #calc "$r1*cos($radHalfAngle)";
+maxz1   #calc "$r1*sin($radHalfAngle)";
+minz1   #calc "-1*$maxz1";
+
+y2      #calc "$r2*cos($radHalfAngle)";
+maxz2   #calc "$r2*sin($radHalfAngle)";
+minz2   #calc "-1*$maxz2";
+
+y3      #calc "$r3*cos($radHalfAngle)";
+maxz3   #calc "$r3*sin($radHalfAngle)";
+minz3   #calc "-1*$maxz3";
+
+y4      #calc "$r4*cos($radHalfAngle)";
+maxz4   #calc "$r4*sin($radHalfAngle)";
+minz4   #calc "-1*$maxz4";
+
+y5      #calc "$r5*cos($radHalfAngle)";
+maxz5   #calc "$r5*sin($radHalfAngle)";
+minz5   #calc "-1*$maxz5";
+
+
+vertices
+(
+  ($x1 0   0)        //0
+  ($x2 0   0)        //1
+  ($x3 0   0)        //2
+
+  ($x1 $y1 $maxz1)   //3
+  ($x1 $y1 $minz1)   //4
+  ($x2 $y1 $maxz1)   //5
+  ($x2 $y1 $minz1)   //6
+  ($x3 $y1 $maxz1)   //7
+  ($x3 $y1 $minz1)   //8
+
+  ($x1 $y2 $maxz2)   //9
+  ($x1 $y2 $minz2)   //10
+  ($x2 $y2 $maxz2)   //11
+  ($x2 $y2 $minz2)   //12
+  ($x3 $y2 $maxz2)   //13
+  ($x3 $y2 $minz2)   //14
+
+  ($x1 $y3 $maxz3)   //15
+  ($x1 $y3 $minz3)   //16
+  ($x2 $y3 $maxz3)   //17
+  ($x2 $y3 $minz3)   //18
+  ($x3 $y3 $maxz3)   //19
+  ($x3 $y3 $minz3)   //20
+
+
+  ($x1 $y4 $maxz4)   //21
+  ($x1 $y4 $minz4)   //22
+  ($x2 $y4 $maxz4)   //23
+  ($x2 $y4 $minz4)   //24
+  ($x3 $y4 $maxz4)   //25
+  ($x3 $y4 $minz4)   //26
+
+  ($x1 $y5 $maxz5)   //27
+  ($x1 $y5 $minz5)   //28
+  ($x2 $y5 $maxz5)   //29
+  ($x2 $y5 $minz5)   //30
+  ($x3 $y5 $maxz5)   //31
+  ($x3 $y5 $minz5)   //32
+
+);
+
+blocks
+(
+    hex (0  1  1  0  3  5  6  4 )     (40   1  5 )   simpleGrading (1   1  1) //block11
+    hex (1  2  2  1  5  7  8  6 )     (270  1  5 )   simpleGrading (2   1  1) //block21
+
+    hex (5  7  8  6  11 13 14 12)     (270  1  1 )   simpleGrading (2   1  1) //block32
+
+    hex (9  11 12 10 15 17 18 16)     (40   1  8 )   simpleGrading (1   1  1) //block13
+    hex (11 13 14 12 17 19 20 18)     (270  1  8 )   simpleGrading (2   1  1) //block13
+
+    hex (17 19 20 18 23 25 26 24)     (270  1  1 )   simpleGrading (2   1  1) //block34
+
+    hex (21 23 24 22 27 29 30 28)     (40   1  130)   simpleGrading (1   1  3) //block25
+    hex (23 25 26 24 29 31 32 30)     (270  1  130)   simpleGrading (2   1  3) //block25
+);
+
+edges
+(
+);
+
+boundary
+(
+    fuel
+    {
+        type patch;
+        faces
+        (
+            (0 3 4 0)
+        );
+    }
+
+    pilot
+    {
+        type patch;
+        faces
+        (
+            (15 16 10 9)
+        );
+    }
+
+    oxidizer
+    {   
+        type patch;
+        faces
+        (   
+            (27 28 22 21)
+        );
+    }
+
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (7  2  2  8 )
+            (13 7  8  14)
+            (19 13 14 20)
+            (25 19 20 26)
+            (31 25 26 32)
+        );
+    }
+
+    axis
+    {
+        type empty;
+        faces
+        (
+            (0  1  1  0 )
+            (1  2  2  1 )
+        );
+    }
+
+    outerWall
+    {
+        type wall;
+        faces
+        (
+            (29 30 28 27)
+            (31 32 30 29)
+        );
+    }
+
+  
+    wall
+    {
+        type wall;
+        faces
+        (
+            (5  6  4  3 )
+            (17 18 16 15)
+
+            (11 12 6  5 )
+            (23 24 18 17)
+
+            (9  10 12 11)
+            (21 22 24 23)
+        );
+    } 
+
+    front
+    {
+        type wedge;
+        faces
+        (
+            (0  1  5  3 )
+            (1  2  7  5 )
+
+            (5  7  13 11)
+
+            (9  11 17 15)
+            (11 13 19 17)
+
+            (17 19 25 23)
+
+            (21 23 29 27)
+            (23 25 31 29)
+        );
+    }
+
+    back
+    {
+        type wedge;
+        faces
+        (
+            (4  6  1  0 )
+            (6  8  2  1 )
+            
+            (12 14 8  6 )
+            
+            (16 18 12 10)
+            (18 20 14 12)
+            
+            (24 26 20 18)
+            
+            (28 30 24 22)
+            (30 32 26 24)
+        );
+    }
+
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //
