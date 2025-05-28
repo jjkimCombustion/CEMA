@@ -25,6 +25,6 @@
 - To compile the library and applications, run the `Allwmake` script:
 
   ```bash
-  cd ~/yourDirectory
+  cd ~/yourDirectory/CEMA/src/thermoPhysicalProperties/
   ./Allwmake
   ```
