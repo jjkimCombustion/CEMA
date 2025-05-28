@@ -1,1 +1,0 @@
-../eigen/doc/snippets/SelfAdjointEigenSolver_compute_MatrixType2.cpp

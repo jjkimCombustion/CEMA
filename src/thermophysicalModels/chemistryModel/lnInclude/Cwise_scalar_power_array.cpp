@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Cwise_scalar_power_array.cpp

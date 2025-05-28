@@ -1,1 +1,0 @@
-../eigen/unsupported/doc/examples/MatrixPower_optimal.cpp

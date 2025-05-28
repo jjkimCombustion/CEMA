@@ -1,1 +1,0 @@
-../eigen/test/zerosized.cpp

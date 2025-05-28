@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Slicing_custom_padding_cxx11.cpp

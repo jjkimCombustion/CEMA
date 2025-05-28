@@ -1,1 +1,0 @@
-../eigen/doc/snippets/DenseBase_LinSpaced_seq_deprecated.cpp

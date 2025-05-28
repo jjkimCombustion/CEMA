@@ -1,1 +1,0 @@
-../eigen/demos/mandelbrot/mandelbrot.h

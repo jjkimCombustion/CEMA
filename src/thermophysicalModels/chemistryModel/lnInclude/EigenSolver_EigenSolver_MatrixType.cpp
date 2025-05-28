@@ -1,1 +1,0 @@
-../eigen/doc/snippets/EigenSolver_EigenSolver_MatrixType.cpp

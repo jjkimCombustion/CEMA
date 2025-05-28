@@ -1,1 +1,0 @@
-../eigen/unsupported/test/cxx11_tensor_image_op_sycl.cpp

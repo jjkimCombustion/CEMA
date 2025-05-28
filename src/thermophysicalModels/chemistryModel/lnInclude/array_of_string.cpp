@@ -1,1 +1,0 @@
-../eigen/test/array_of_string.cpp

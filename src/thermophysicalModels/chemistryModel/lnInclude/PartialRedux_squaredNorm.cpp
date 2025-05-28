@@ -1,1 +1,0 @@
-../eigen/doc/snippets/PartialRedux_squaredNorm.cpp

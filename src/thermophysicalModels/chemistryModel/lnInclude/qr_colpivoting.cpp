@@ -1,1 +1,0 @@
-../eigen/test/qr_colpivoting.cpp

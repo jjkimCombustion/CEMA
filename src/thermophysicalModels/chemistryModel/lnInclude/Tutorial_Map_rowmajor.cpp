@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Tutorial_Map_rowmajor.cpp

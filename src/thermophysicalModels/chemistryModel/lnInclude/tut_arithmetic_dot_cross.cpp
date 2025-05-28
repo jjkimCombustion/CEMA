@@ -1,1 +1,0 @@
-../eigen/doc/examples/tut_arithmetic_dot_cross.cpp

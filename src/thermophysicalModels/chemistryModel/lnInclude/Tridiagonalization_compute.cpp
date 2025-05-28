@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Tridiagonalization_compute.cpp

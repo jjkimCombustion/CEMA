@@ -1,1 +1,0 @@
-../eigen/doc/snippets/DirectionWise_replicate.cpp

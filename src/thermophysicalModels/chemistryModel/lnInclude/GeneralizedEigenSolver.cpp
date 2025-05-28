@@ -1,1 +1,0 @@
-../eigen/doc/snippets/GeneralizedEigenSolver.cpp

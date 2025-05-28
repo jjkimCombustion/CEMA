@@ -1,1 +1,0 @@
-../eigen/doc/examples/class_FixedVectorBlock.cpp

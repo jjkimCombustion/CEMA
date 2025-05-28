@@ -1,1 +1,0 @@
-../eigen/test/mapstaticmethods.cpp

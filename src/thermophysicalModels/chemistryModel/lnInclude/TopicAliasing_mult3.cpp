@@ -1,1 +1,0 @@
-../eigen/doc/snippets/TopicAliasing_mult3.cpp

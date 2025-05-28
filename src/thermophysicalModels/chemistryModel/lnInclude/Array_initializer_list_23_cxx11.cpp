@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Array_initializer_list_23_cxx11.cpp

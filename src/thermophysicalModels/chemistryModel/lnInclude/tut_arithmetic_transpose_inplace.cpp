@@ -1,1 +1,0 @@
-../eigen/doc/snippets/tut_arithmetic_transpose_inplace.cpp

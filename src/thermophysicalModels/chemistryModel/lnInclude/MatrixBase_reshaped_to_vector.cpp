@@ -1,1 +1,0 @@
-../eigen/doc/snippets/MatrixBase_reshaped_to_vector.cpp

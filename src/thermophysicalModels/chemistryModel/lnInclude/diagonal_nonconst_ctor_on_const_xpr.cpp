@@ -1,1 +1,0 @@
-../eigen/failtest/diagonal_nonconst_ctor_on_const_xpr.cpp

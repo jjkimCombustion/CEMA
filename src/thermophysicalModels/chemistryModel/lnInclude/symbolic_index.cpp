@@ -1,1 +1,0 @@
-../eigen/test/symbolic_index.cpp

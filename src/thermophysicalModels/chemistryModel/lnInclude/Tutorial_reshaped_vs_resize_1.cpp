@@ -1,1 +1,0 @@
-../eigen/doc/snippets/Tutorial_reshaped_vs_resize_1.cpp

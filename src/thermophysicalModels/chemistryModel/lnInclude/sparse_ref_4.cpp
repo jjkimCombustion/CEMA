@@ -1,1 +1,0 @@
-../eigen/failtest/sparse_ref_4.cpp

@@ -1,1 +1,0 @@
-../eigen/test/product_small.cpp

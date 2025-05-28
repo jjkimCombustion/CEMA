@@ -1,1 +1,0 @@
-../eigen/test/diagonal_matrix_variadic_ctor.cpp

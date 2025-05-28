@@ -1,1 +1,0 @@
-../eigen/unsupported/test/cxx11_tensor_scan_sycl.cpp

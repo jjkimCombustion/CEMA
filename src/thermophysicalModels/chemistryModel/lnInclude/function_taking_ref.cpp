@@ -1,1 +1,0 @@
-../eigen/doc/examples/function_taking_ref.cpp

@@ -1,1 +1,0 @@
-../eigen/doc/snippets/MatrixBase_diagonal_int.cpp
