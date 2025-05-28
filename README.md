@@ -18,7 +18,7 @@
 - Specify the path of your directory to an environment variable
 
   ```bash
-  echo "export LIB_CEMA_SRC=~/yourDirectory/src/" >> ~/.bashrc
+  echo "export LIB_CEMA_SRC=~/yourDirectory/CEMA/src/" >> ~/.bashrc
   source ~/.bashrc
   ```
 
